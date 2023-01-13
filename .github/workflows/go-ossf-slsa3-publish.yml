@@ -6,8 +6,8 @@ permissions: read-all
 
 jobs:
   # action:
+  runs-on: slsa
   build:
-    runs-on: slsa
     permissions:
       id-token: write
       contents: read
