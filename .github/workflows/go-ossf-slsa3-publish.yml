@@ -6,8 +6,7 @@ permissions: read-all
 
 jobs:
   build:
-  # action:
-    runs-on: slsa, self-hosted
+    runs-on: self-hosted
     permissions:
       id-token: write
       contents: read
