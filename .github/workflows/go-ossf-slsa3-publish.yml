@@ -5,6 +5,8 @@ on:
 permissions: read-all
 
 jobs:
+  label:
+    runs-on: slsa
   build:
     permissions:
       id-token: write
