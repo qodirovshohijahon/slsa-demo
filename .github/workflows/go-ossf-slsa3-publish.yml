@@ -13,8 +13,9 @@ jobs:
       contents: read
       actions: read
       packages: write
-    # runs-on: self-hosted
-    uses: ianlewis/slsa-github-generator/.github/workflows/builder_dockerfile_slsa3.yml@dockerfile-builder
+    steps:
+    - uses: ianlewis/slsa-github-generator/.github/workflows/builder_dockerfile_slsa3.yml@dockerfile-builder
+    - name: build
     with:
       tags: "ghcr.io/ianlewis/actions-test:${{ github.ref_name }}-${{ github.sha }}"
     secrets:
