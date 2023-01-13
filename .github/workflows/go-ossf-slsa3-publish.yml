@@ -14,9 +14,9 @@ jobs:
       actions: read
       packages: write
     steps:
-    - uses: ianlewis/slsa-github-generator/.github/workflows/builder_dockerfile_slsa3.yml@dockerfile-builder
-    - name: build
-    with:
-      tags: "ghcr.io/ianlewis/actions-test:${{ github.ref_name }}-${{ github.sha }}"
-    secrets:
-      personal_access_token: ${{ secrets.PACKAGES_TOKEN }}
+      - uses: ianlewis/slsa-github-generator/.github/workflows/builder_dockerfile_slsa3.yml@dockerfile-builder
+      - name: build
+        with:
+          tags: "ghcr.io/ianlewis/actions-test:${{ github.ref_name }}-${{ github.sha }}"
+        secrets:
+          personal_access_token: ${{ secrets.PACKAGES_TOKEN }}
